@@ -1,0 +1,3296 @@
+{
+  "datasetVersion": "synthetic-permit-v1",
+  "seed": 20261109,
+  "referenceDate": "2030-06-15",
+  "renderEnvironment": {
+    "node": "v24.22.2",
+    "platform": "darwin",
+    "arch": "arm64",
+    "vips": "8.18.7"
+  },
+  "entries": [
+    {
+      "sampleId": "SYN-001",
+      "scenario": "normal",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0001",
+        "plateNumber": "DEMO-A0001",
+        "issuingRegion": "示例省",
+        "validFrom": "2030年06月01日",
+        "validTo": "2030年06月30日",
+        "length": "18 m",
+        "width": "3.2 m",
+        "height": "4米",
+        "weight": "49 吨",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "证件编号",
+          "value": "DEMO-PERMIT-0001"
+        },
+        {
+          "label": "车牌号码",
+          "value": "DEMO-A0001"
+        },
+        {
+          "label": "签发地区",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期起",
+          "value": "2030年06月01日"
+        },
+        {
+          "label": "有效期止",
+          "value": "2030年06月30日"
+        },
+        {
+          "label": "车货总长",
+          "value": "18 m"
+        },
+        {
+          "label": "车货总宽",
+          "value": "3.2 m"
+        },
+        {
+          "label": "车货总高",
+          "value": "4米"
+        },
+        {
+          "label": "车货总重",
+          "value": "49 吨"
+        },
+        {
+          "label": "轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行路线",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0001"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0001"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 18,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-001.png",
+      "sha256": "8837c1eee6e615507d66600ee8428c02bf68dc3884e8f0134df7f3ca6e13c148",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-002",
+      "scenario": "normal",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0002",
+        "plateNumber": "DEMO-A0002",
+        "issuingRegion": "示例省",
+        "validFrom": "2030/06/01",
+        "validTo": "2030/06/30",
+        "length": "18500 mm",
+        "width": "320 厘米",
+        "height": "4 m",
+        "weight": "49000 kg",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "许可证编号",
+          "value": "DEMO-PERMIT-0002"
+        },
+        {
+          "label": "车辆号牌",
+          "value": "DEMO-A0002"
+        },
+        {
+          "label": "签发区域",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期开始",
+          "value": "2030/06/01"
+        },
+        {
+          "label": "有效期结束",
+          "value": "2030/06/30"
+        },
+        {
+          "label": "车货总长度",
+          "value": "18500 mm"
+        },
+        {
+          "label": "车货总宽度",
+          "value": "320 厘米"
+        },
+        {
+          "label": "车货总高度",
+          "value": "4 m"
+        },
+        {
+          "label": "车货总质量",
+          "value": "49000 kg"
+        },
+        {
+          "label": "车轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行线路",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0002"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0002"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 18.5,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-002.png",
+      "sha256": "f5375818b31815d70fbcbafba422b063ded04e95633bc368218f8f3d78ce62de",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-003",
+      "scenario": "normal",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0003",
+        "plateNumber": "DEMO-A0003",
+        "issuingRegion": "示例省",
+        "validFrom": "2030-06-01",
+        "validTo": "2030-06-30",
+        "length": "19米",
+        "width": "3.2 m",
+        "height": "4 m",
+        "weight": "49 吨",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "证件编号",
+          "value": "DEMO-PERMIT-0003"
+        },
+        {
+          "label": "车牌号码",
+          "value": "DEMO-A0003"
+        },
+        {
+          "label": "签发地区",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期起",
+          "value": "2030-06-01"
+        },
+        {
+          "label": "有效期止",
+          "value": "2030-06-30"
+        },
+        {
+          "label": "车货总长",
+          "value": "19米"
+        },
+        {
+          "label": "车货总宽",
+          "value": "3.2 m"
+        },
+        {
+          "label": "车货总高",
+          "value": "4 m"
+        },
+        {
+          "label": "车货总重",
+          "value": "49 吨"
+        },
+        {
+          "label": "轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行路线",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0003"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0003"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 19,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-003.png",
+      "sha256": "e1e5782b805919503495668baa262ed18d9669f28e7eefb978ec1869ca376dc4",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-004",
+      "scenario": "normal",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0004",
+        "plateNumber": "DEMO-A0004",
+        "issuingRegion": "示例省",
+        "validFrom": "2030-06-01",
+        "validTo": "2030-06-30",
+        "length": "18米",
+        "width": "3.2 m",
+        "height": "4 m",
+        "weight": "49000 kg",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "证件编号",
+          "value": "DEMO-PERMIT-0004"
+        },
+        {
+          "label": "车牌号码",
+          "value": "DEMO-A0004"
+        },
+        {
+          "label": "签发地区",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期起",
+          "value": "2030-06-01"
+        },
+        {
+          "label": "有效期止",
+          "value": "2030-06-30"
+        },
+        {
+          "label": "车货总长",
+          "value": "18米"
+        },
+        {
+          "label": "车货总宽",
+          "value": "3.2 m"
+        },
+        {
+          "label": "车货总高",
+          "value": "4 m"
+        },
+        {
+          "label": "车货总重",
+          "value": "49000 kg"
+        },
+        {
+          "label": "轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行路线",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0004"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0004"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 18,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-004.png",
+      "sha256": "a002153d03bf86e6a98e0837ad0e732a47416d40b0f51671e00ba8d63dfb17b7",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-005",
+      "scenario": "normal",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0005",
+        "plateNumber": "DEMO-A0005",
+        "issuingRegion": "示例省",
+        "validFrom": "2030年06月01日",
+        "validTo": "2030年06月30日",
+        "length": "18.5 m",
+        "width": "3.2 m",
+        "height": "4米",
+        "weight": "49 吨",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "许可证编号",
+          "value": "DEMO-PERMIT-0005"
+        },
+        {
+          "label": "车辆号牌",
+          "value": "DEMO-A0005"
+        },
+        {
+          "label": "签发区域",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期开始",
+          "value": "2030年06月01日"
+        },
+        {
+          "label": "有效期结束",
+          "value": "2030年06月30日"
+        },
+        {
+          "label": "车货总长度",
+          "value": "18.5 m"
+        },
+        {
+          "label": "车货总宽度",
+          "value": "3.2 m"
+        },
+        {
+          "label": "车货总高度",
+          "value": "4米"
+        },
+        {
+          "label": "车货总质量",
+          "value": "49 吨"
+        },
+        {
+          "label": "车轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行线路",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0005"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0005"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 18.5,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-005.png",
+      "sha256": "ed8f1df9b8a5e4bb7ab6a31328822933d124053abf340254054f982cb149f83b",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-006",
+      "scenario": "normal",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0006",
+        "plateNumber": "DEMO-A0006",
+        "issuingRegion": "示例省",
+        "validFrom": "2030/06/01",
+        "validTo": "2030/06/30",
+        "length": "19000 mm",
+        "width": "320 厘米",
+        "height": "4 m",
+        "weight": "49000 kg",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "证件编号",
+          "value": "DEMO-PERMIT-0006"
+        },
+        {
+          "label": "车牌号码",
+          "value": "DEMO-A0006"
+        },
+        {
+          "label": "签发地区",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期起",
+          "value": "2030/06/01"
+        },
+        {
+          "label": "有效期止",
+          "value": "2030/06/30"
+        },
+        {
+          "label": "车货总长",
+          "value": "19000 mm"
+        },
+        {
+          "label": "车货总宽",
+          "value": "320 厘米"
+        },
+        {
+          "label": "车货总高",
+          "value": "4 m"
+        },
+        {
+          "label": "车货总重",
+          "value": "49000 kg"
+        },
+        {
+          "label": "轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行路线",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0006"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0006"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 19,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-006.png",
+      "sha256": "842e4af229fb87988614f7b6552a3efb3a571649ae119bfc87511b474e8559fd",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-007",
+      "scenario": "normal",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0007",
+        "plateNumber": "DEMO-A0007",
+        "issuingRegion": "示例省",
+        "validFrom": "2030-06-01",
+        "validTo": "2030-06-30",
+        "length": "18米",
+        "width": "3.2 m",
+        "height": "4 m",
+        "weight": "49 吨",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "证件编号",
+          "value": "DEMO-PERMIT-0007"
+        },
+        {
+          "label": "车牌号码",
+          "value": "DEMO-A0007"
+        },
+        {
+          "label": "签发地区",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期起",
+          "value": "2030-06-01"
+        },
+        {
+          "label": "有效期止",
+          "value": "2030-06-30"
+        },
+        {
+          "label": "车货总长",
+          "value": "18米"
+        },
+        {
+          "label": "车货总宽",
+          "value": "3.2 m"
+        },
+        {
+          "label": "车货总高",
+          "value": "4 m"
+        },
+        {
+          "label": "车货总重",
+          "value": "49 吨"
+        },
+        {
+          "label": "轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行路线",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0007"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0007"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 18,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-007.png",
+      "sha256": "519a42e8fd6fb37047b3a5cc3851c1e1f2eaaf8c36f9446ef18ba182a86a901a",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-008",
+      "scenario": "normal",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0008",
+        "plateNumber": "DEMO-A0008",
+        "issuingRegion": "示例省",
+        "validFrom": "2030-06-01",
+        "validTo": "2030-06-30",
+        "length": "18.5米",
+        "width": "3.2 m",
+        "height": "4 m",
+        "weight": "49000 kg",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "许可证编号",
+          "value": "DEMO-PERMIT-0008"
+        },
+        {
+          "label": "车辆号牌",
+          "value": "DEMO-A0008"
+        },
+        {
+          "label": "签发区域",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期开始",
+          "value": "2030-06-01"
+        },
+        {
+          "label": "有效期结束",
+          "value": "2030-06-30"
+        },
+        {
+          "label": "车货总长度",
+          "value": "18.5米"
+        },
+        {
+          "label": "车货总宽度",
+          "value": "3.2 m"
+        },
+        {
+          "label": "车货总高度",
+          "value": "4 m"
+        },
+        {
+          "label": "车货总质量",
+          "value": "49000 kg"
+        },
+        {
+          "label": "车轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行线路",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0008"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0008"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 18.5,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-008.png",
+      "sha256": "208b6fd3776a0024ad3fe4650ad027e05cf786f88d0e5d36f243224abf3dc422",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-009",
+      "scenario": "normal",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0009",
+        "plateNumber": "DEMO-A0009",
+        "issuingRegion": "示例省",
+        "validFrom": "2030年06月01日",
+        "validTo": "2030年06月30日",
+        "length": "19 m",
+        "width": "3.2 m",
+        "height": "4米",
+        "weight": "49 吨",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "证件编号",
+          "value": "DEMO-PERMIT-0009"
+        },
+        {
+          "label": "车牌号码",
+          "value": "DEMO-A0009"
+        },
+        {
+          "label": "签发地区",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期起",
+          "value": "2030年06月01日"
+        },
+        {
+          "label": "有效期止",
+          "value": "2030年06月30日"
+        },
+        {
+          "label": "车货总长",
+          "value": "19 m"
+        },
+        {
+          "label": "车货总宽",
+          "value": "3.2 m"
+        },
+        {
+          "label": "车货总高",
+          "value": "4米"
+        },
+        {
+          "label": "车货总重",
+          "value": "49 吨"
+        },
+        {
+          "label": "轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行路线",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0009"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0009"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 19,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-009.png",
+      "sha256": "3a29648e194fd6994a26a3f948892ee20d031f16362728a1777a1f7482004453",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-010",
+      "scenario": "normal",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0010",
+        "plateNumber": "DEMO-A0010",
+        "issuingRegion": "示例省",
+        "validFrom": "2030/06/01",
+        "validTo": "2030/06/30",
+        "length": "18000 mm",
+        "width": "320 厘米",
+        "height": "4 m",
+        "weight": "49000 kg",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "证件编号",
+          "value": "DEMO-PERMIT-0010"
+        },
+        {
+          "label": "车牌号码",
+          "value": "DEMO-A0010"
+        },
+        {
+          "label": "签发地区",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期起",
+          "value": "2030/06/01"
+        },
+        {
+          "label": "有效期止",
+          "value": "2030/06/30"
+        },
+        {
+          "label": "车货总长",
+          "value": "18000 mm"
+        },
+        {
+          "label": "车货总宽",
+          "value": "320 厘米"
+        },
+        {
+          "label": "车货总高",
+          "value": "4 m"
+        },
+        {
+          "label": "车货总重",
+          "value": "49000 kg"
+        },
+        {
+          "label": "轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行路线",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0010"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0010"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 18,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-010.png",
+      "sha256": "d1bd96241a0e385da4c5d276e7b704257b550314d07c8ddb714508ff71666824",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-011",
+      "scenario": "normal",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0011",
+        "plateNumber": "DEMO-A0011",
+        "issuingRegion": "示例省",
+        "validFrom": "2030-06-01",
+        "validTo": "2030-06-30",
+        "length": "18.5米",
+        "width": "3.2 m",
+        "height": "4 m",
+        "weight": "49 吨",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "许可证编号",
+          "value": "DEMO-PERMIT-0011"
+        },
+        {
+          "label": "车辆号牌",
+          "value": "DEMO-A0011"
+        },
+        {
+          "label": "签发区域",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期开始",
+          "value": "2030-06-01"
+        },
+        {
+          "label": "有效期结束",
+          "value": "2030-06-30"
+        },
+        {
+          "label": "车货总长度",
+          "value": "18.5米"
+        },
+        {
+          "label": "车货总宽度",
+          "value": "3.2 m"
+        },
+        {
+          "label": "车货总高度",
+          "value": "4 m"
+        },
+        {
+          "label": "车货总质量",
+          "value": "49 吨"
+        },
+        {
+          "label": "车轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行线路",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0011"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0011"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 18.5,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-011.png",
+      "sha256": "0762dbfc776b66ebe412a82dfe839f92cc11fba0c8cc1443ee9c842e6be44722",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-012",
+      "scenario": "normal",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0012",
+        "plateNumber": "DEMO-A0012",
+        "issuingRegion": "示例省",
+        "validFrom": "2030-06-01",
+        "validTo": "2030-06-30",
+        "length": "19米",
+        "width": "3.2 m",
+        "height": "4 m",
+        "weight": "49000 kg",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "证件编号",
+          "value": "DEMO-PERMIT-0012"
+        },
+        {
+          "label": "车牌号码",
+          "value": "DEMO-A0012"
+        },
+        {
+          "label": "签发地区",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期起",
+          "value": "2030-06-01"
+        },
+        {
+          "label": "有效期止",
+          "value": "2030-06-30"
+        },
+        {
+          "label": "车货总长",
+          "value": "19米"
+        },
+        {
+          "label": "车货总宽",
+          "value": "3.2 m"
+        },
+        {
+          "label": "车货总高",
+          "value": "4 m"
+        },
+        {
+          "label": "车货总重",
+          "value": "49000 kg"
+        },
+        {
+          "label": "轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行路线",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0012"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0012"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 19,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-012.png",
+      "sha256": "f1efe8409320b912e085765f15ac5d48d27f43a9acac963dc203d477250cde4e",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-013",
+      "scenario": "normal",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0013",
+        "plateNumber": "DEMO-A0013",
+        "issuingRegion": "示例省",
+        "validFrom": "2030年06月01日",
+        "validTo": "2030年06月30日",
+        "length": "18 m",
+        "width": "3.2 m",
+        "height": "4米",
+        "weight": "49 吨",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "证件编号",
+          "value": "DEMO-PERMIT-0013"
+        },
+        {
+          "label": "车牌号码",
+          "value": "DEMO-A0013"
+        },
+        {
+          "label": "签发地区",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期起",
+          "value": "2030年06月01日"
+        },
+        {
+          "label": "有效期止",
+          "value": "2030年06月30日"
+        },
+        {
+          "label": "车货总长",
+          "value": "18 m"
+        },
+        {
+          "label": "车货总宽",
+          "value": "3.2 m"
+        },
+        {
+          "label": "车货总高",
+          "value": "4米"
+        },
+        {
+          "label": "车货总重",
+          "value": "49 吨"
+        },
+        {
+          "label": "轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行路线",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0013"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0013"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 18,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-013.png",
+      "sha256": "a0486bd3aedd1f824df7f0256160bb5a1c24f04b3707c6cf25072d5cdc897e81",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-014",
+      "scenario": "normal",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0014",
+        "plateNumber": "DEMO-A0014",
+        "issuingRegion": "示例省",
+        "validFrom": "2030/06/01",
+        "validTo": "2030/06/30",
+        "length": "18500 mm",
+        "width": "320 厘米",
+        "height": "4 m",
+        "weight": "49000 kg",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "许可证编号",
+          "value": "DEMO-PERMIT-0014"
+        },
+        {
+          "label": "车辆号牌",
+          "value": "DEMO-A0014"
+        },
+        {
+          "label": "签发区域",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期开始",
+          "value": "2030/06/01"
+        },
+        {
+          "label": "有效期结束",
+          "value": "2030/06/30"
+        },
+        {
+          "label": "车货总长度",
+          "value": "18500 mm"
+        },
+        {
+          "label": "车货总宽度",
+          "value": "320 厘米"
+        },
+        {
+          "label": "车货总高度",
+          "value": "4 m"
+        },
+        {
+          "label": "车货总质量",
+          "value": "49000 kg"
+        },
+        {
+          "label": "车轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行线路",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0014"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0014"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 18.5,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-014.png",
+      "sha256": "2d0ad25211d8826513f7ed187cfe62ce256d11028507ea0bcc370764f22a091f",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-015",
+      "scenario": "normal",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0015",
+        "plateNumber": "DEMO-A0015",
+        "issuingRegion": "示例省",
+        "validFrom": "2030-06-01",
+        "validTo": "2030-06-30",
+        "length": "19米",
+        "width": "3.2 m",
+        "height": "4 m",
+        "weight": "49 吨",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "证件编号",
+          "value": "DEMO-PERMIT-0015"
+        },
+        {
+          "label": "车牌号码",
+          "value": "DEMO-A0015"
+        },
+        {
+          "label": "签发地区",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期起",
+          "value": "2030-06-01"
+        },
+        {
+          "label": "有效期止",
+          "value": "2030-06-30"
+        },
+        {
+          "label": "车货总长",
+          "value": "19米"
+        },
+        {
+          "label": "车货总宽",
+          "value": "3.2 m"
+        },
+        {
+          "label": "车货总高",
+          "value": "4 m"
+        },
+        {
+          "label": "车货总重",
+          "value": "49 吨"
+        },
+        {
+          "label": "轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行路线",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0015"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0015"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 19,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-015.png",
+      "sha256": "ec54d6181da187d1a308a52901743d5fdfa66bc79a5d01b5ef61ba53e63971cd",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-016",
+      "scenario": "normal",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0016",
+        "plateNumber": "DEMO-A0016",
+        "issuingRegion": "示例省",
+        "validFrom": "2030-06-01",
+        "validTo": "2030-06-30",
+        "length": "18米",
+        "width": "3.2 m",
+        "height": "4 m",
+        "weight": "49000 kg",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "证件编号",
+          "value": "DEMO-PERMIT-0016"
+        },
+        {
+          "label": "车牌号码",
+          "value": "DEMO-A0016"
+        },
+        {
+          "label": "签发地区",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期起",
+          "value": "2030-06-01"
+        },
+        {
+          "label": "有效期止",
+          "value": "2030-06-30"
+        },
+        {
+          "label": "车货总长",
+          "value": "18米"
+        },
+        {
+          "label": "车货总宽",
+          "value": "3.2 m"
+        },
+        {
+          "label": "车货总高",
+          "value": "4 m"
+        },
+        {
+          "label": "车货总重",
+          "value": "49000 kg"
+        },
+        {
+          "label": "轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行路线",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0016"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0016"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 18,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-016.png",
+      "sha256": "8a87eb79200f342a4fda0bfba7d521bc7ce639f97648c0ed3b61d0791dbab210",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-017",
+      "scenario": "normal",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0017",
+        "plateNumber": "DEMO-A0017",
+        "issuingRegion": "示例省",
+        "validFrom": "2030年06月01日",
+        "validTo": "2030年06月30日",
+        "length": "18.5 m",
+        "width": "3.2 m",
+        "height": "4米",
+        "weight": "49 吨",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "许可证编号",
+          "value": "DEMO-PERMIT-0017"
+        },
+        {
+          "label": "车辆号牌",
+          "value": "DEMO-A0017"
+        },
+        {
+          "label": "签发区域",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期开始",
+          "value": "2030年06月01日"
+        },
+        {
+          "label": "有效期结束",
+          "value": "2030年06月30日"
+        },
+        {
+          "label": "车货总长度",
+          "value": "18.5 m"
+        },
+        {
+          "label": "车货总宽度",
+          "value": "3.2 m"
+        },
+        {
+          "label": "车货总高度",
+          "value": "4米"
+        },
+        {
+          "label": "车货总质量",
+          "value": "49 吨"
+        },
+        {
+          "label": "车轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行线路",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0017"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0017"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 18.5,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-017.png",
+      "sha256": "ca15f30e17f825d616c869dbb9982a618bcbfaee8b38e62f4f9addf10ff98c35",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-018",
+      "scenario": "normal",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0018",
+        "plateNumber": "DEMO-A0018",
+        "issuingRegion": "示例省",
+        "validFrom": "2030/06/01",
+        "validTo": "2030/06/30",
+        "length": "19000 mm",
+        "width": "320 厘米",
+        "height": "4 m",
+        "weight": "49000 kg",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "证件编号",
+          "value": "DEMO-PERMIT-0018"
+        },
+        {
+          "label": "车牌号码",
+          "value": "DEMO-A0018"
+        },
+        {
+          "label": "签发地区",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期起",
+          "value": "2030/06/01"
+        },
+        {
+          "label": "有效期止",
+          "value": "2030/06/30"
+        },
+        {
+          "label": "车货总长",
+          "value": "19000 mm"
+        },
+        {
+          "label": "车货总宽",
+          "value": "320 厘米"
+        },
+        {
+          "label": "车货总高",
+          "value": "4 m"
+        },
+        {
+          "label": "车货总重",
+          "value": "49000 kg"
+        },
+        {
+          "label": "轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行路线",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0018"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0018"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 19,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-018.png",
+      "sha256": "0de0715b40ef1dc4dd7a75ea5bb50f1ebb592483b92305dd542e51bb6eac6917",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-019",
+      "scenario": "quality",
+      "quality": "blur:6",
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0019",
+        "plateNumber": "DEMO-A0019",
+        "issuingRegion": "示例省",
+        "validFrom": "2030-06-01",
+        "validTo": "2030-06-30",
+        "length": "18米",
+        "width": "3.2 m",
+        "height": "4 m",
+        "weight": "49 吨",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "证件编号",
+          "value": "DEMO-PERMIT-0019"
+        },
+        {
+          "label": "车牌号码",
+          "value": "DEMO-A0019"
+        },
+        {
+          "label": "签发地区",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期起",
+          "value": "2030-06-01"
+        },
+        {
+          "label": "有效期止",
+          "value": "2030-06-30"
+        },
+        {
+          "label": "车货总长",
+          "value": "18米"
+        },
+        {
+          "label": "车货总宽",
+          "value": "3.2 m"
+        },
+        {
+          "label": "车货总高",
+          "value": "4 m"
+        },
+        {
+          "label": "车货总重",
+          "value": "49 吨"
+        },
+        {
+          "label": "轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行路线",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0019"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0019"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 18,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-019.png",
+      "sha256": "7716899749c8dc2708422144799da634a304295cabc83f6590a3ceebce56b9c3",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-020",
+      "scenario": "quality",
+      "quality": "blur:11",
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0020",
+        "plateNumber": "DEMO-A0020",
+        "issuingRegion": "示例省",
+        "validFrom": "2030-06-01",
+        "validTo": "2030-06-30",
+        "length": "18.5米",
+        "width": "3.2 m",
+        "height": "4 m",
+        "weight": "49000 kg",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "许可证编号",
+          "value": "DEMO-PERMIT-0020"
+        },
+        {
+          "label": "车辆号牌",
+          "value": "DEMO-A0020"
+        },
+        {
+          "label": "签发区域",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期开始",
+          "value": "2030-06-01"
+        },
+        {
+          "label": "有效期结束",
+          "value": "2030-06-30"
+        },
+        {
+          "label": "车货总长度",
+          "value": "18.5米"
+        },
+        {
+          "label": "车货总宽度",
+          "value": "3.2 m"
+        },
+        {
+          "label": "车货总高度",
+          "value": "4 m"
+        },
+        {
+          "label": "车货总质量",
+          "value": "49000 kg"
+        },
+        {
+          "label": "车轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行线路",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0020"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0020"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 18.5,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-020.png",
+      "sha256": "c0fbafc5fd7d0e72f0e95ecbd0039c64d38adda8cb22c765a773e6a1c8adae0c",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-021",
+      "scenario": "quality",
+      "quality": "contrast:0.55",
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0021",
+        "plateNumber": "DEMO-A0021",
+        "issuingRegion": "示例省",
+        "validFrom": "2030年06月01日",
+        "validTo": "2030年06月30日",
+        "length": "19 m",
+        "width": "3.2 m",
+        "height": "4米",
+        "weight": "49 吨",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "证件编号",
+          "value": "DEMO-PERMIT-0021"
+        },
+        {
+          "label": "车牌号码",
+          "value": "DEMO-A0021"
+        },
+        {
+          "label": "签发地区",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期起",
+          "value": "2030年06月01日"
+        },
+        {
+          "label": "有效期止",
+          "value": "2030年06月30日"
+        },
+        {
+          "label": "车货总长",
+          "value": "19 m"
+        },
+        {
+          "label": "车货总宽",
+          "value": "3.2 m"
+        },
+        {
+          "label": "车货总高",
+          "value": "4米"
+        },
+        {
+          "label": "车货总重",
+          "value": "49 吨"
+        },
+        {
+          "label": "轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行路线",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0021"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0021"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 19,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-021.png",
+      "sha256": "3030b5e542469ccb6aeaa7d738d7fe81c9a0ea81ce13f75c529cab3d5ca2f928",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-022",
+      "scenario": "quality",
+      "quality": "rotate:1.5",
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0022",
+        "plateNumber": "DEMO-A0022",
+        "issuingRegion": "示例省",
+        "validFrom": "2030/06/01",
+        "validTo": "2030/06/30",
+        "length": "18000 mm",
+        "width": "320 厘米",
+        "height": "4 m",
+        "weight": "49000 kg",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "证件编号",
+          "value": "DEMO-PERMIT-0022"
+        },
+        {
+          "label": "车牌号码",
+          "value": "DEMO-A0022"
+        },
+        {
+          "label": "签发地区",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期起",
+          "value": "2030/06/01"
+        },
+        {
+          "label": "有效期止",
+          "value": "2030/06/30"
+        },
+        {
+          "label": "车货总长",
+          "value": "18000 mm"
+        },
+        {
+          "label": "车货总宽",
+          "value": "320 厘米"
+        },
+        {
+          "label": "车货总高",
+          "value": "4 m"
+        },
+        {
+          "label": "车货总重",
+          "value": "49000 kg"
+        },
+        {
+          "label": "轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行路线",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0022"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0022"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 18,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-022.png",
+      "sha256": "86bb8e67d7a0c74cd7e9574f9ce606e0d0e06c2f9cf4d7d580841c8c5835ea0c",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-023",
+      "scenario": "quality",
+      "quality": "rotate:-2",
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0023",
+        "plateNumber": "DEMO-A0023",
+        "issuingRegion": "示例省",
+        "validFrom": "2030-06-01",
+        "validTo": "2030-06-30",
+        "length": "18.5米",
+        "width": "3.2 m",
+        "height": "4 m",
+        "weight": "49 吨",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "许可证编号",
+          "value": "DEMO-PERMIT-0023"
+        },
+        {
+          "label": "车辆号牌",
+          "value": "DEMO-A0023"
+        },
+        {
+          "label": "签发区域",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期开始",
+          "value": "2030-06-01"
+        },
+        {
+          "label": "有效期结束",
+          "value": "2030-06-30"
+        },
+        {
+          "label": "车货总长度",
+          "value": "18.5米"
+        },
+        {
+          "label": "车货总宽度",
+          "value": "3.2 m"
+        },
+        {
+          "label": "车货总高度",
+          "value": "4 m"
+        },
+        {
+          "label": "车货总质量",
+          "value": "49 吨"
+        },
+        {
+          "label": "车轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行线路",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0023"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0023"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 18.5,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-023.png",
+      "sha256": "637bd1c19ebe1e386259577f8cd7bb96b2d8b1a65981f5964e2f766a4464fed7",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-024",
+      "scenario": "quality",
+      "quality": "brightness:0.72",
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0024",
+        "plateNumber": "DEMO-A0024",
+        "issuingRegion": "示例省",
+        "validFrom": "2030-06-01",
+        "validTo": "2030-06-30",
+        "length": "19米",
+        "width": "3.2 m",
+        "height": "4 m",
+        "weight": "49000 kg",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "证件编号",
+          "value": "DEMO-PERMIT-0024"
+        },
+        {
+          "label": "车牌号码",
+          "value": "DEMO-A0024"
+        },
+        {
+          "label": "签发地区",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期起",
+          "value": "2030-06-01"
+        },
+        {
+          "label": "有效期止",
+          "value": "2030-06-30"
+        },
+        {
+          "label": "车货总长",
+          "value": "19米"
+        },
+        {
+          "label": "车货总宽",
+          "value": "3.2 m"
+        },
+        {
+          "label": "车货总高",
+          "value": "4 m"
+        },
+        {
+          "label": "车货总重",
+          "value": "49000 kg"
+        },
+        {
+          "label": "轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行路线",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0024"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0024"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 19,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": true,
+      "filename": "SYN-024.png",
+      "sha256": "fac336c914ac12b350e029ee1a2828ed1aec0150f69a2e4add694ad574983e22",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-025",
+      "scenario": "missing",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0025",
+        "plateNumber": "DEMO-A0025",
+        "issuingRegion": "示例省",
+        "validFrom": "2030年06月01日",
+        "validTo": "2030年06月30日",
+        "length": "18 m",
+        "width": "3.2 m",
+        "height": "4米",
+        "weight": "49 吨",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "证件编号",
+          "value": "DEMO-PERMIT-0025"
+        },
+        {
+          "label": "车牌号码",
+          "value": "DEMO-A0025"
+        },
+        {
+          "label": "签发地区",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期起",
+          "value": "2030年06月01日"
+        },
+        {
+          "label": "有效期止",
+          "value": "2030年06月30日"
+        },
+        {
+          "label": "车货总长",
+          "value": "18 m"
+        },
+        {
+          "label": "车货总高",
+          "value": "4米"
+        },
+        {
+          "label": "车货总重",
+          "value": "49 吨"
+        },
+        {
+          "label": "轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行路线",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0025"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0025"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 18,
+          "unit": "m"
+        },
+        "width": null,
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": false,
+      "filename": "SYN-025.png",
+      "sha256": "78f5ea2e8b1e4c07f47f00fc6bd16237aa033619b862dd828bc051be4a331e4a",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-026",
+      "scenario": "missing",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0026",
+        "plateNumber": "DEMO-A0026",
+        "issuingRegion": "示例省",
+        "validFrom": "2030/06/01",
+        "validTo": "2030/06/30",
+        "length": "18500 mm",
+        "width": "320 厘米",
+        "height": "4 m",
+        "weight": "49000 kg",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "许可证编号",
+          "value": "DEMO-PERMIT-0026"
+        },
+        {
+          "label": "车辆号牌",
+          "value": "DEMO-A0026"
+        },
+        {
+          "label": "签发区域",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期开始",
+          "value": "2030/06/01"
+        },
+        {
+          "label": "车货总长度",
+          "value": "18500 mm"
+        },
+        {
+          "label": "车货总宽度",
+          "value": "320 厘米"
+        },
+        {
+          "label": "车货总高度",
+          "value": "4 m"
+        },
+        {
+          "label": "车货总质量",
+          "value": "49000 kg"
+        },
+        {
+          "label": "车轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行线路",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0026"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0026"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": null,
+        "length": {
+          "value": 18.5,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": false,
+      "filename": "SYN-026.png",
+      "sha256": "16b5afaa72ef3e60f0e0512650fcd1055888c6121c1f296773b98838077e4c0f",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-027",
+      "scenario": "missing",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0027",
+        "plateNumber": "DEMO-A0027",
+        "issuingRegion": "示例省",
+        "validFrom": "2030-06-01",
+        "validTo": "2030-06-30",
+        "length": "19米",
+        "width": "3.2 m",
+        "height": "4 m",
+        "weight": "49 吨",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "证件编号",
+          "value": "DEMO-PERMIT-0027"
+        },
+        {
+          "label": "车牌号码",
+          "value": "DEMO-A9001"
+        },
+        {
+          "label": "车辆号牌",
+          "value": "DEMO-A9002"
+        },
+        {
+          "label": "签发地区",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期起",
+          "value": "2030-06-01"
+        },
+        {
+          "label": "有效期止",
+          "value": "2030-06-30"
+        },
+        {
+          "label": "车货总长",
+          "value": "19米"
+        },
+        {
+          "label": "车货总宽",
+          "value": "3.2 m"
+        },
+        {
+          "label": "车货总高",
+          "value": "4 m"
+        },
+        {
+          "label": "车货总重",
+          "value": "49 吨"
+        },
+        {
+          "label": "轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行路线",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0027"
+        },
+        "plateNumber": null,
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 19,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": false,
+      "filename": "SYN-027.png",
+      "sha256": "3c151672609a9af51b025412ed88c1db586d8d30b6b0db719587c8a4e61b1602",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-028",
+      "scenario": "missing",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0028",
+        "plateNumber": "DEMO-A0028",
+        "issuingRegion": "示例省",
+        "validFrom": "2030-06-01",
+        "validTo": "2030-06-30",
+        "length": "18米",
+        "width": "3.2 m",
+        "height": "4 m",
+        "weight": "49000 kg",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "证件编号",
+          "value": "DEMO-PERMIT-0028"
+        },
+        {
+          "label": "车牌号码",
+          "value": "DEMO-A0028"
+        },
+        {
+          "label": "签发地区",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期起",
+          "value": "2030-06-01"
+        },
+        {
+          "label": "有效期止",
+          "value": "2030-06-30"
+        },
+        {
+          "label": "车货总长",
+          "value": "18米"
+        },
+        {
+          "label": "车货总宽",
+          "value": "3.2 m"
+        },
+        {
+          "label": "车货总高",
+          "value": "4 m"
+        },
+        {
+          "label": "车货总重",
+          "value": "49000 kg"
+        },
+        {
+          "label": "轴数",
+          "value": "6"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0028"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0028"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": 18,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": null
+      },
+      "expectedValid": false,
+      "filename": "SYN-028.png",
+      "sha256": "26d51309073b8abcb068f6a501c9bf02d2e9e9144f5e526e64c0fc251dacb0ad",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-029",
+      "scenario": "business",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0029",
+        "plateNumber": "DEMO-A0029",
+        "issuingRegion": "示例省",
+        "validFrom": "2030-06-30",
+        "validTo": "2030-06-01",
+        "length": "18.5 m",
+        "width": "3.2 m",
+        "height": "4米",
+        "weight": "49 吨",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "许可证编号",
+          "value": "DEMO-PERMIT-0029"
+        },
+        {
+          "label": "车辆号牌",
+          "value": "DEMO-A0029"
+        },
+        {
+          "label": "签发区域",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期开始",
+          "value": "2030-06-30"
+        },
+        {
+          "label": "有效期结束",
+          "value": "2030-06-01"
+        },
+        {
+          "label": "车货总长度",
+          "value": "18.5 m"
+        },
+        {
+          "label": "车货总宽度",
+          "value": "3.2 m"
+        },
+        {
+          "label": "车货总高度",
+          "value": "4米"
+        },
+        {
+          "label": "车货总质量",
+          "value": "49 吨"
+        },
+        {
+          "label": "车轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行线路",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0029"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0029"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-30"
+        },
+        "validTo": {
+          "value": "2030-06-01"
+        },
+        "length": {
+          "value": 18.5,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": false,
+      "filename": "SYN-029.png",
+      "sha256": "21b63f6558aa9ce09c4ef6283594e7f43364effc485bc25fd672db477b76c883",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    },
+    {
+      "sampleId": "SYN-030",
+      "scenario": "business",
+      "quality": null,
+      "referenceDate": "2030-06-15",
+      "rawValues": {
+        "permitNumber": "DEMO-PERMIT-0030",
+        "plateNumber": "DEMO-A0030",
+        "issuingRegion": "示例省",
+        "validFrom": "2030/06/01",
+        "validTo": "2030/06/30",
+        "length": "-1米",
+        "width": "320 厘米",
+        "height": "4 m",
+        "weight": "49000 kg",
+        "axleCount": "6",
+        "passRoute": "示例入口-S01-示例出口"
+      },
+      "renderLines": [
+        {
+          "label": "证件编号",
+          "value": "DEMO-PERMIT-0030"
+        },
+        {
+          "label": "车牌号码",
+          "value": "DEMO-A0030"
+        },
+        {
+          "label": "签发地区",
+          "value": "示例省"
+        },
+        {
+          "label": "有效期起",
+          "value": "2030/06/01"
+        },
+        {
+          "label": "有效期止",
+          "value": "2030/06/30"
+        },
+        {
+          "label": "车货总长",
+          "value": "-1米"
+        },
+        {
+          "label": "车货总宽",
+          "value": "320 厘米"
+        },
+        {
+          "label": "车货总高",
+          "value": "4 m"
+        },
+        {
+          "label": "车货总重",
+          "value": "49000 kg"
+        },
+        {
+          "label": "轴数",
+          "value": "6"
+        },
+        {
+          "label": "通行路线",
+          "value": "示例入口-S01-示例出口"
+        }
+      ],
+      "expectedCandidates": {
+        "permitNumber": {
+          "value": "DEMO-PERMIT-0030"
+        },
+        "plateNumber": {
+          "value": "DEMO-A0030"
+        },
+        "issuingRegion": {
+          "value": "示例省"
+        },
+        "validFrom": {
+          "value": "2030-06-01"
+        },
+        "validTo": {
+          "value": "2030-06-30"
+        },
+        "length": {
+          "value": -1,
+          "unit": "m"
+        },
+        "width": {
+          "value": 3.2,
+          "unit": "m"
+        },
+        "height": {
+          "value": 4,
+          "unit": "m"
+        },
+        "weight": {
+          "value": 49000,
+          "unit": "kg"
+        },
+        "axleCount": {
+          "value": 6
+        },
+        "passRoute": {
+          "value": "示例入口-S01-示例出口"
+        }
+      },
+      "expectedValid": false,
+      "filename": "SYN-030.png",
+      "sha256": "e1a36a83e83dbd435caeda0af367e0281d78c82d643fcede01c771eefc87ca7d",
+      "synthetic": true,
+      "watermark": true,
+      "mime": "image/png"
+    }
+  ]
+}

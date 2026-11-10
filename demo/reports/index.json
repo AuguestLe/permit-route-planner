@@ -1,0 +1,10 @@
+[
+  {
+    "runId": "1263823d-21b0-4595-9ad9-09e920fbb3e3",
+    "startedAt": "2026-11-09T13:59:03.368Z",
+    "mode": "local-ocr",
+    "model": "local-tesseract",
+    "datasetVersion": "synthetic-permit-v1",
+    "total": 30
+  }
+]
