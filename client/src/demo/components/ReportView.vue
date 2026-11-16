@@ -1,17 +1,19 @@
 <script setup>
 import { computed, ref, watch } from 'vue'
 import { FIELD_LABELS, candidateText, fieldStatus, formatPrecision, modeLabel } from '../format.js'
-import { demoApi } from '../api.js'
 
 const props = defineProps({
+  api: { type: Object, required: true },
   reports: { type: Array, default: () => [] },
   report: { type: Object, default: null },
   busy: { type: Boolean, default: false },
 })
 const emit = defineEmits(['select', 'refresh'])
+const demoApi = props.api
 const selectedRun = ref(null)
 const expanded = ref(null)
 const fieldKeys = Object.keys(FIELD_LABELS)
+const exportFormats = [['json', 'JSON'], ['field-csv', '字段 CSV'], ['samples-csv', '样本 CSV'], ['markdown', 'Markdown']]
 const metrics = computed(() => props.report?.metrics)
 const samples = computed(() => props.report?.samples || [])
 const metricCards = computed(() => metrics.value ? [
@@ -92,10 +94,7 @@ function fieldErrors(sample, key) {
         <aside>
           <h3>导出</h3>
           <div class="exports">
-            <a :href="demoApi.reportExportUrl(report.runId, 'json')">JSON</a>
-            <a :href="demoApi.reportExportUrl(report.runId, 'field-csv')">字段 CSV</a>
-            <a :href="demoApi.reportExportUrl(report.runId, 'samples-csv')">样本 CSV</a>
-            <a :href="demoApi.reportExportUrl(report.runId, 'markdown')">Markdown</a>
+            <a v-for="format in exportFormats" :key="format[0]" :href="demoApi.reportExportUrl(report.runId, format[0])" :download="demoApi.exportName?.(report.runId, format[0])">{{ format[1] }}</a>
           </div>
           <p class="method">指标使用人工修订前预测；整单完全正确包含 null；自动通过必须字段正确且业务预期有效。阈值未校准，不构成真实证件验收。</p>
         </aside>

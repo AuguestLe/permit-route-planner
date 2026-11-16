@@ -15,6 +15,7 @@ defineProps({ trace: { type: Array, default: () => [] } })
         <span v-if="step.level">分级 {{ step.level }} · {{ step.action }}</span>
         <span v-if="step.durationMs != null">{{ step.durationMs }} ms</span>
         <span v-if="step.repairCount != null">修正 {{ step.repairCount }} 次</span>
+        <span v-if="step.note">{{ step.note }}</span>
       </li>
     </ol>
   </details>

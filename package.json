@@ -18,7 +18,11 @@
     "start:demo": "node --env-file-if-exists=.env.demo server/demo/index.js",
     "demo:generate": "node scripts/generate-demo-samples.mjs",
     "demo:evaluate": "node --env-file-if-exists=.env.demo scripts/evaluate-demo.mjs",
-    "test:demo:browser": "node scripts/verify-demo-browser.mjs"
+    "test:demo:browser": "node scripts/verify-demo-browser.mjs",
+    "pages:data": "node scripts/build-static-demo-data.mjs",
+    "build:pages": "node scripts/build-pages.mjs",
+    "preview:pages": "vite preview --config vite.config.js --mode pages",
+    "test:pages:browser": "node scripts/verify-pages-demo.mjs"
   },
   "dependencies": {
     "@tesseract.js-data/chi_sim": "1.0.0",

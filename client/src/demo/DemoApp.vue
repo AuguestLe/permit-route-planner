@@ -1,10 +1,15 @@
 <script setup>
 import { onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
 import zhCN from 'ant-design-vue/es/locale/zh_CN'
-import { demoApi } from './api.js'
 import VerifyView from './components/VerifyView.vue'
 import ReviewQueue from './components/ReviewQueue.vue'
 import ReportView from './components/ReportView.vue'
+
+const props = defineProps({
+  api: { type: Object, required: true },
+  staticMode: { type: Boolean, default: false },
+})
+const demoApi = props.api
 
 const view = ref('verify')
 const health = ref(null)
@@ -17,6 +22,7 @@ const busy = ref(false)
 const error = ref('')
 const notice = ref('')
 let pollTimer = null
+let refreshingRecords = false
 const theme = { token: { colorPrimary: '#0f6b62', colorText: '#273b36', borderRadius: 8, fontSize: 13, fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif', controlHeight: 34 } }
 const views = reactive([
   { key: 'verify', label: '单张核验' },
@@ -31,12 +37,17 @@ async function refreshSamplesAndHealth() {
   samples.value = sampleResult.samples
 }
 async function refreshRecords() {
-  const result = await demoApi.records()
-  records.value = result.records
-  if (record.value) {
-    const current = result.records.find(item => item.id === record.value.id)
-    if (current) record.value = current
-  }
+  if (refreshingRecords) return
+  refreshingRecords = true
+  try {
+    const result = await demoApi.records()
+    records.value = result.records
+    if (record.value) {
+      const current = result.records.find(item => item.id === record.value.id)
+      // Reassign only on a real change: a fresh object every refresh would retrigger watch(record).
+      if (current && (current.version !== record.value.version || current.status !== record.value.status)) record.value = current
+    }
+  } finally { refreshingRecords = false }
 }
 async function refreshReports() {
   const result = await demoApi.reports()
@@ -63,7 +74,7 @@ async function createRecord({ sampleId, file }) {
   notice.value = ''
   try {
     record.value = await demoApi.createRecord(sampleId, file)
-    notice.value = '合成样例已保存，请手动开始核验。'
+    notice.value = props.staticMode ? '合成样例已载入浏览器内存，请手动开始核验回放。' : '合成样例已保存，请手动开始核验。'
     await refreshRecords()
   } catch (caught) { setError(caught) } finally { busy.value = false }
 }
@@ -73,7 +84,8 @@ async function runRecord({ mode, externalConfirmed }) {
   error.value = ''
   try {
     record.value = await demoApi.runRecord(record.value.id, { version: record.value.version, mode, externalConfirmed })
-    notice.value = mode === 'local-ocr' ? '本地核验已排队，不外发图片。' : '视觉核验已排队；仅发送本次登记合成样例。'
+    notice.value = props.staticMode ? '正在回放已冻结的本地 OCR 核验结果，不上传图片。'
+      : mode === 'local-ocr' ? '本地核验已排队，不外发图片。' : '视觉核验已排队；仅发送本次登记合成样例。'
     startPolling()
   } catch (caught) { setError(caught) } finally { busy.value = false }
 }
@@ -94,12 +106,11 @@ async function loadReport(runId) {
 }
 
 watch(record, value => {
-  if (!value || !['queued', 'running'].includes(value.status)) {
-    if (value?.status === 'completed') {
-      clearInterval(pollTimer)
-      refreshRecords().catch(setError)
-    }
-  }
+  if (!value || !pollTimer) return
+  if (value.status === 'queued' || value.status === 'running') return
+  clearInterval(pollTimer)
+  pollTimer = null
+  refreshRecords().catch(setError)
 })
 
 onMounted(refreshAll)
@@ -119,8 +130,8 @@ onBeforeUnmount(() => clearInterval(pollTimer))
         </div>
         <div class="header-status">
           <span class="status-dot" :class="{ online: health?.ok }"></span>
-          <span>{{ health?.ok ? '本机服务已连接' : '本机服务未连接' }}</span>
-          <small>{{ health?.visionConfigured ? '视觉 API 已配置' : '仅本地 OCR' }}</small>
+          <span>{{ staticMode ? '静态回放模式' : health?.ok ? '本机服务已连接' : '本机服务未连接' }}</span>
+          <small>{{ staticMode ? 'GitHub Pages · 无后端' : health?.visionConfigured ? '视觉 API 已配置' : '仅本地 OCR' }}</small>
         </div>
       </header>
 
@@ -129,7 +140,7 @@ onBeforeUnmount(() => clearInterval(pollTimer))
           <span>{{ item.label }}</span>
           <small v-if="item.key === 'review'">{{ records.filter(item => item.status === 'completed').length }}</small>
         </button>
-        <span class="nav-note">合成样例 <b>30</b> · 合成数据 · 硬门禁 · 人工兜底</span>
+        <span class="nav-note">合成样例 <b>{{ samples.length || 30 }}</b> · 合成数据 · 硬门禁 · 人工兜底</span>
       </nav>
 
       <main class="demo-main">
@@ -138,6 +149,8 @@ onBeforeUnmount(() => clearInterval(pollTimer))
 
         <VerifyView
           v-if="view === 'verify'"
+          :api="api"
+          :static-mode="staticMode"
           :samples="samples"
           :health="health"
           :record="record"
@@ -148,6 +161,7 @@ onBeforeUnmount(() => clearInterval(pollTimer))
         />
         <ReviewQueue
           v-else-if="view === 'review'"
+          :api="api"
           :records="records"
           :busy="busy"
           @review="submitReview"
@@ -155,6 +169,7 @@ onBeforeUnmount(() => clearInterval(pollTimer))
         />
         <ReportView
           v-else
+          :api="api"
           :reports="reports"
           :report="report"
           :busy="busy"
@@ -164,8 +179,8 @@ onBeforeUnmount(() => clearInterval(pollTimer))
       </main>
 
       <footer class="demo-footer">
-        <span>仅接收本项目登记的合成样例 · 不读取旧证件附件</span>
-        <span>阈值未校准 · 非真伪鉴定 · 本地流程不外发</span>
+        <span>{{ staticMode ? '静态预览 · 仅回放已冻结的本地 OCR 结果' : '仅接收本项目登记的合成样例 · 不读取旧证件附件' }}</span>
+        <span>阈值未校准 · 非真伪鉴定 · {{ staticMode ? '记录仅保存在本机浏览器' : '本地流程不外发' }}</span>
       </footer>
     </div>
   </a-config-provider>

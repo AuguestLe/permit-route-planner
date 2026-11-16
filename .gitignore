@@ -9,4 +9,5 @@ dist/
 *.log
 .data-demo/
 dist-demo/
+dist-pages/
 !.env.demo.example

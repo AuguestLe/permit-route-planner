@@ -2,15 +2,17 @@
 import { computed, ref } from 'vue'
 import { FIELD_LABELS, candidateText, confidenceLabel } from '../format.js'
 import ToolTrace from './ToolTrace.vue'
-import { demoApi } from '../api.js'
 
 const props = defineProps({
+  api: { type: Object, required: true },
+  staticMode: { type: Boolean, default: false },
   samples: { type: Array, default: () => [] },
   health: { type: Object, default: null },
   record: { type: Object, default: null },
   busy: { type: Boolean, default: false },
 })
 const emit = defineEmits(['create', 'run', 'refresh'])
+const demoApi = props.api
 const selectedSampleId = ref('SYN-001')
 const mode = ref('local-ocr')
 const confirmed = ref(false)
@@ -45,6 +47,10 @@ function uploadLocalFile() {
 function run() {
   emit('run', { mode: mode.value, externalConfirmed: mode.value === 'local-ocr' ? false : confirmed.value })
 }
+
+function imageUrl(id) {
+  return demoApi.imageUrl(id) ?? ''
+}
 </script>
 
 <template>
@@ -53,12 +59,12 @@ function run() {
       <div>
         <p class="eyebrow">Synthetic permit pipeline</p>
         <h2>单张核验</h2>
-        <p class="muted">上传登记合成样例，观察质检、工具调用、硬门禁与转人工原因。</p>
+        <p class="muted">{{ staticMode ? '载入登记合成样例，回放已冻结的 OCR 结果与硬门禁判定。' : '上传登记合成样例，观察质检、工具调用、硬门禁与转人工原因。' }}</p>
       </div>
       <a-button :loading="busy" @click="emit('refresh')">刷新</a-button>
     </header>
 
-    <div class="banner"><strong>合成数据演示</strong><span>阈值未校准 · 非真伪鉴定 · 不处理企业真实证件</span></div>
+    <div class="banner"><strong>合成数据演示</strong><span>{{ staticMode ? '阈值未校准 · 非真伪鉴定 · 静态回放，无后端' : '阈值未校准 · 非真伪鉴定 · 不处理企业真实证件' }}</span></div>
 
     <div class="control-grid">
       <label class="control">
@@ -71,7 +77,7 @@ function run() {
       </label>
       <div class="control">
         <span>一键加载</span>
-        <a-button :disabled="busy || !selectedSample" @click="loadRegisteredSample">读取登记样例并上传</a-button>
+        <a-button :disabled="busy || !selectedSample" @click="loadRegisteredSample">{{ staticMode ? '载入登记样例' : '读取登记样例并上传' }}</a-button>
       </div>
       <label class="control">
         <span>或选择同一合成文件</span>
@@ -126,7 +132,7 @@ function run() {
 
       <div class="verify-grid">
         <figure class="document-stage">
-          <img :src="demoApi.imageUrl(record.id)" alt="合成样例原图" />
+          <img :src="imageUrl(record.id)" alt="合成样例原图" />
           <figcaption>{{ record.sampleId }} · 合成数据，不可用于真实通行或证件验收</figcaption>
         </figure>
         <div class="table-wrap">

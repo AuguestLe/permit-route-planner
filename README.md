@@ -10,6 +10,7 @@
 | --- | --- | --- | --- | --- |
 | OCR 校对工作台 | `npm run dev` / `npm start` | 5174（开发）/ 4317（后端） | `.data/` | 上传、识别、逐字段校对、任务版本冲突保护 |
 | 结构化核验 Agent Demo | `npm run dev:demo` / `npm run start:demo` | 5175（开发）/ 4318（后端） | `.data-demo/` | 合成样例、质量门禁、工具调用抽取、校验与分级、人工复核、评测报告 |
+| 静态预览 Demo（GitHub Pages） | `npm run build:pages` / `npm run preview:pages` | 无后端（纯静态） | 浏览器 `localStorage` | 回放已冻结的本地 OCR 评测结果，界面与 Demo 一致，可直接发布到 GitHub Pages |
 
 两部分共用构建配置、组件库和纯工具模块，但使用独立启动入口、接口命名空间与数据目录，互不读取对方数据。
 
@@ -113,6 +114,9 @@ docs/superpowers/      Demo 设计说明与实现计划
 | `npm run demo:generate` | 生成 `synthetic-permit-v1` 合成样例 |
 | `npm run demo:evaluate` | 运行评测并导出报告 |
 | `npm run test:demo:browser` | Demo 浏览器流程验证（需先启动 Demo） |
+| `npm run build:pages` | 构建无后端静态预览到 `dist-pages/`（含样例图片与冻结评测数据） |
+| `npm run preview:pages` | 本地预览 `dist-pages/`（默认挂在 `/permit-route-planner/` 子路径） |
+| `npm run test:pages:browser` | 静态预览浏览器验证（先 `npm run build:pages`，脚本自带静态服务器） |
 
 ## 接口概览
 
@@ -171,6 +175,25 @@ npm run demo:evaluate -- --mode local --all
 
 视觉模式评测：先在 `.env.demo` 填写视觉服务配置，运行 `npm run demo:evaluate -- --mode vision --limit 3 --confirm-external` 检查结果并确认费用后，再运行 `--mode vision --all --confirm-external`。未完成真实调用时报告必须显示待实测，不得用本地或夹具成绩替代。
 
+## 静态预览 Demo（GitHub Pages）
+
+`dist-pages/` 是一个不依赖后端、不发起外部请求的静态站点，发布后可直接在浏览器里点完整个核验流程。
+
+```bash
+npm run build:pages        # 生成冻结数据 → 打包 → 输出 dist-pages/index.html
+npm run preview:pages      # http://127.0.0.1:4173/permit-route-planner/
+npm run test:pages:browser # 端到端验证（脚本自建静态服务器 + 本机 Chrome）
+```
+
+- 图片与评测报告在构建期打包：`demo/samples/*.png` 变成带哈希的静态资源，`demo/reports/*` 压成约 430 KB 的 `demo-data.json`；仓库不新增二进制副本
+- 点击「开始核验」不会调用任何识别服务，只按 4 个阶段回放 `demo/reports` 中已冻结的本地 OCR 结果，并在工具轨迹里标注 `replay`
+- 视觉模式在静态版不可用（无服务端配置），只提供本地 OCR 回放
+- 记录保存在浏览器 `localStorage`（上限 100 条，7 天过期），刷新后仍在；导出 JSON／CSV／Markdown 由前端生成 `data:` 链接，不请求服务端
+- Schema 校验、字段规范化与分级判定直接复用 `server/demo/*.js` 的纯函数，所以静态版的门禁结论与服务端一致
+- 页面顶部标注「静态回放模式 · GitHub Pages · 无后端」，不影响「阈值未校准 · 非真伪鉴定」的声明
+
+发布步骤：仓库 **Settings → Pages → Build and deployment → Source = GitHub Actions**，之后推送到 `main` 即由 `.github/workflows/pages.yml` 构建并部署到 `https://auguestle.github.io/permit-route-planner/`（首次部署需在 Pages 设置里确认一次来源）。若仓库名或自定义域不同，用 `PAGES_BASE=/你的路径/ npm run build:pages` 覆盖默认的 `/permit-route-planner/` 前缀。
+
 ## 隐私与运行限制
 
 - 服务仅监听 `127.0.0.1`，没有多人认证，不应通过代理或端口转发开放至公网或局域网
@@ -186,6 +209,7 @@ npm run demo:evaluate -- --mode local --all
 - 未接入地图、货车路径规划与调度系统
 - Tesseract 存在错字、空格与版式识别误差；本轮使用原生 txt 输出，`confidence` 为 `null`，页面不展示虚构置信度
 - Demo 的编号、地区与路线为虚构格式，Schema 不代表真实行政机关的验证规则
+- 静态预览只回放一份已冻结的评测结果，不重新识别图片，也不做真实图像质检计算；它不是线上识别服务
 - 尚需授权真实证件样本才能评估生产可用性
 
 ## 文档

@@ -3,9 +3,11 @@ import { computed, reactive, ref, watch } from 'vue'
 import { FIELD_LABELS } from '../format.js'
 
 const props = defineProps({
+  api: { type: Object, required: true },
   records: { type: Array, default: () => [] },
   busy: { type: Boolean, default: false },
 })
+const demoApi = props.api
 const emit = defineEmits(['select', 'review', 'refresh'])
 const selectedId = ref(null)
 const draft = reactive({})
@@ -58,7 +60,7 @@ function submit(conclusion) {
 
     <div v-if="selected" class="review-grid">
       <figure>
-        <img :src="`/api/demo/records/${selected.id}/file`" alt="待复核合成样例" />
+        <img :src="demoApi.imageUrl(selected.id) ?? ''" alt="待复核合成样例" />
         <figcaption>{{ selected.sampleId }} · 合成数据</figcaption>
       </figure>
       <div>

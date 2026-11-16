@@ -1,7 +1,8 @@
-import { createApp } from 'vue'
+import { createApp, h } from 'vue'
 import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/reset.css'
 import DemoApp from './DemoApp.vue'
+import { demoApi } from './api.js'
 import './demo.css'
 
-createApp(DemoApp).use(Antd).mount('#app')
+createApp({ render: () => h(DemoApp, { api: demoApi }) }).use(Antd).mount('#app')
