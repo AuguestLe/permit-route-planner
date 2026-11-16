@@ -116,7 +116,7 @@ docs/superpowers/      Demo 设计说明与实现计划
 | `npm run test:demo:browser` | Demo 浏览器流程验证（需先启动 Demo） |
 | `npm run build:pages` | 构建无后端静态预览到 `dist-pages/`（含样例图片与冻结评测数据） |
 | `npm run preview:pages` | 本地预览 `dist-pages/`（默认挂在 `/permit-route-planner/` 子路径） |
-| `npm run test:pages:browser` | 静态预览浏览器验证（先 `npm run build:pages`，脚本自带静态服务器） |
+| `npm run test:pages:browser` | 静态预览浏览器验证（先 `npm run build:pages`，脚本自带静态服务器；设 `PAGES_URL` 则验线上站点） |
 
 ## 接口概览
 
@@ -183,7 +183,11 @@ npm run demo:evaluate -- --mode local --all
 npm run build:pages        # 生成冻结数据 → 打包 → 输出 dist-pages/index.html
 npm run preview:pages      # http://127.0.0.1:4173/permit-route-planner/
 npm run test:pages:browser # 端到端验证（脚本自建静态服务器 + 本机 Chrome）
+PAGES_URL=https://auguestle.github.io/permit-route-planner/ \
+  npm run test:pages:browser   # 同一套断言直接验线上站点
 ```
+
+线上地址：<https://auguestle.github.io/permit-route-planner/>
 
 - 图片与评测报告在构建期打包：`demo/samples/*.png` 变成带哈希的静态资源，`demo/reports/*` 压成约 430 KB 的 `demo-data.json`；仓库不新增二进制副本
 - 点击「开始核验」不会调用任何识别服务，只按 4 个阶段回放 `demo/reports` 中已冻结的本地 OCR 结果，并在工具轨迹里标注 `replay`
